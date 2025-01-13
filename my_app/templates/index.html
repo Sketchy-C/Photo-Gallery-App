@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>Gallery !!</h1>
+{% include 'gallery.html' %}
+{% else %}
+    <div class="p-auto">
+      <div class="p-10 flex">
+          <p class="p-3">Already have an account ? Login</p>
+          <a
+            href="/login"
+            class="bg-[#e7d8c6ea] p-2 m-2 rounded-lg hover:bg-[#ff0000ea] hover:text-white "
+            >Login</a
+          >
+
+      </div>
+        <div  class="p-10 flex">
+            <p class="p-3">Don't have an account ? Create one</p>
+            <a
+              href="/register"
+              class="bg-[#e7d8c6ea] p-2 m-2 rounded-lg hover:bg-[#ff0000ea] hover:text-white "
+              >Register</a
+            >
+
+        </div>
+    </div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+<nav class="nav">
+    
+{% if user.is_authenticated %}
+<ul>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'profile' %}">Profile</a></li>
+</ul>
+
+{% else %}
+<p class="p-5">If you have Just created an account, you'll just need to login</p>
+{% endif %}
+</nav>

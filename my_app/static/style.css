@@ -1,0 +1,49 @@
+body{
+    font-family: 'Comic Sans Ms' ;
+    font-size: 18px;
+    background: rgba(253, 236, 215, 0.918);
+}
+
+.nav{
+    background: white;
+}
+.nav ul{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.nav ul li a{
+    list-style: none;
+    background: #e7d8c6ea;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+
+}
+.nav ul li a:hover{
+    background: #ff0000ea;
+    color: white;
+}
+
+.form {
+    padding: 20px;
+    color: rgb(35, 24, 105);
+    background: rgba(255, 247, 237, 0.918);
+    font-size: 16px;
+}
+
+.form button{
+    color: black;
+}
+
+.form input{
+    background: #d6d6d6;
+    margin: 10px;
+    padding: 3px;
+    border: 1px solid slategray;
+    border-radius: 10px;
+}
+

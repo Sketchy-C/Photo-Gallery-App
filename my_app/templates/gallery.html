@@ -1,0 +1,28 @@
+
+<nav class="nav flex justify-between">
+    <ul>
+        <li><a href="/" class="text-sm">Gallery</a></li>
+    </ul>
+    <ul>
+        <li><a href="?category=car" class="text-sm">Cars</a></li>
+        <li><a href="?category=person" class="text-sm">People</a></li>
+        <li><a href="?category=phone" class="text-sm">Phones</a></li>
+        <li><a href="?category=gaming" class="text-sm">Gaming</a></li>
+    </ul>
+    <ul>
+        <li  class="text-sm">:Filter</li>
+    </ul>
+</nav>
+
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 p-5">
+    {% for group in grouped_images %}
+        <div class="grid gap-4">
+            {% for image_info in group %}
+                <div>
+                    <img class="h-auto max-w-full rounded-lg max-h-96 hover:drop-shadow-2xl shadow-slate-900" src="{{ image_info.image }}" alt="{{ image_info.name }}">
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Profile page {% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1 class="m-5">Welcome to your Profile</h1>
+<div class="flex">
+  <div>
+    <img src="{{pfpImage}}" alt="" class="rounded-full h-32 m-5 mt-0">
+  </div>
+  <div>
+    <h1 class="m-5 text-red-900 text-2xl">: {{userDetail.username}}</h1> 
+    <h2 class="m-5 text-red-900 text-2xl">: {{userDetail.email}}</h2>  
+  </div>
+</div>
+<a href="{% url 'logout' %}" class="bg-[#e7d8c6ea] p-2 m-2 rounded-lg hover:bg-[#ff0000ea] hover:text-white">Logout</a>
+{% else %}
+    <div class="p-auto">
+        <div  class="p-10">
+            <p class="p-3">Don't have an account ? Create one</p>
+            <a
+              href="/register"
+              class="bg-[#e7d8c6ea] p-2 m-2 rounded-lg hover:bg-[#ff0000ea] hover:text-white "
+              >Register</a
+            >
+        </div>
+        <div class="p-10">
+            <p class="p-3">Already have an account ? Login</p>
+            <a
+              href="/login"
+              class="bg-[#e7d8c6ea] p-2 m-2 rounded-lg hover:bg-[#ff0000ea] hover:text-white "
+              >Login</a
+            >
+
+        </div>
+    </div>
+{% endif %}
+
+{% endblock %}
