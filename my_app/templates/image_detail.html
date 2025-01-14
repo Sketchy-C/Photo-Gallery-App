@@ -3,10 +3,24 @@
 
 {% block content %}
 
-    <h1>{{ image.name }}</h1>
-    <p>Category: {{ image.category }}</p>
-    <img src="{{ image.image }}" alt="{{ image.name }}" width="600">
-    <br><br>
-    <a href="/">Back to Homepage</a>
+<nav class="nav">
+    <ul>
+        <li>
+            <a href="/" class="text-sm">Back Home</a>
+        </li>
+    </ul>
+</nav>
+<div class="flex p-5">
+    <div>
+        <img src="{{ image.image }}" alt="{{ image.name }}" width="400" class="p-5 rounded-lg">
+    </div>
+    <div class="justify-center">
+        <p class="p-3 ">Category: {{ image.category }}</p>
+        <h1 class="p-3 ">Name: {{ image.name }}</h1>
+
+
+    </div>
+</div>
     
+
 {% endblock %}

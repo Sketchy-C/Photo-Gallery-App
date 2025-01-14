@@ -122,7 +122,7 @@ image_url_list = [
     {
         'category': 'person',
         'image': 'https://media.licdn.com/dms/image/v2/D4D03AQGjBicHKZgAEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732409621550?e=1742428800&v=beta&t=jKDLVMZIBsmp8OxhwV4SuSvJQKoj9A1kzAE0ha88low',
-        'name': 'Tr'
+        'name': 'Cecilia -- Linkedin'
     },
     {
         'category': 'person',
