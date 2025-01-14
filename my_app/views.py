@@ -261,7 +261,9 @@ def profile(response):
     return render(response,'profile.html',{'userDetail':userDetail, 'pfpImage':pfpImage})
 
 def logout(response):
+
     auth_logout(response)
+    
     return redirect('home')
 
 
